@@ -20,7 +20,8 @@
                 <configuration>
                     <instructions>
                         <Export-Package>fr.imag.adele.cadse.test.runtime*;version="${version.cadse}"</Export-Package>
-                        <Import-Package>*</Import-Package>
+                        <Import-Package>junit.framework*;version="4.8.1",
+ 						org.junit.*;version="4.8.1",*</Import-Package>
                    </instructions>
                 </configuration>
             </plugin>

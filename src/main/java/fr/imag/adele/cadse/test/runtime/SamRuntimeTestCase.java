@@ -4,11 +4,14 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.BeforeClass;
+
 import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
+import fr.imag.adele.cadse.core.WSModelState;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.ui.view.NewContext;
@@ -21,6 +24,15 @@ import lig.adele.sam.selecta.service.selection.utils.SelectionAlgorithmUtils;
 
 public class SamRuntimeTestCase extends TestCase {
 
+	@BeforeClass
+	public static void beforeClass() throws InterruptedException {
+		while (true) {
+			LogicalWorkspace wl = CadseCore.getLogicalWorkspace();
+			if (wl != null && wl.getState() == WSModelState.RUN)
+				return;
+			Thread.sleep(100);
+		}
+	}
 	
 	public void testname() throws Exception {
 		CadseDomain cadseDomain = CadseCore.getCadseDomain();
