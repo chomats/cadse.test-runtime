@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseGCST;
@@ -22,6 +25,7 @@ import lig.adele.sam.selecta.service.selection.utils.Constraint;
 import lig.adele.sam.selecta.service.selection.utils.SelectaUtils;
 import lig.adele.sam.selecta.service.selection.utils.SelectionAlgorithmUtils;
 
+@RunWith(JUnit4.class)
 public class SamRuntimeTestCase extends TestCase {
 
 	@BeforeClass
@@ -34,6 +38,7 @@ public class SamRuntimeTestCase extends TestCase {
 		}
 	}
 	
+	@Test
 	public void testname() throws Exception {
 		CadseDomain cadseDomain = CadseCore.getCadseDomain();
 		LogicalWorkspace lw = cadseDomain.getLogicalWorkspace();
