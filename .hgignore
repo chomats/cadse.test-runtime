@@ -1,0 +1,8 @@
+syntax: glob
+*.class
+.metadata/*
+.cadse/*
+target/*
+.DS_Store
+*~
+META-INF/MANIFEST.MF
