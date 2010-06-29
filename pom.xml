@@ -3,7 +3,7 @@
   <groupId>fr.imag.adele.cadse.runtime</groupId>
   <artifactId>fr.imag.adele.cadse.test.runtime</artifactId>
   <packaging>bundle</packaging>
-  <name>fr.imag.adele.cadse.test.ui</name>
+  <name>fr.imag.adele.cadse.test.runtime</name>
   <version>2.3.0-SNAPSHOT</version>
   <parent>
   	<artifactId>fr.imag.adele.cadse.parent.osgi</artifactId>
