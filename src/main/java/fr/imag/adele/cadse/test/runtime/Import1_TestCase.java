@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+import org.osgi.framework.Bundle;
 
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.WSModelState;
@@ -28,6 +29,7 @@ public class Import1_TestCase extends TestCase {
 	public void testname() throws Exception {
 		String dir = System.getProperty("fr.image.adele.cadse.test.path");
 		String resFile = dir+"/../workspace.zip";
-		Activator.cxt.installBundle("file:"+resFile);
+		Bundle b = Activator.cxt.installBundle("file:"+resFile);
+		b.start();
 	}
 }
